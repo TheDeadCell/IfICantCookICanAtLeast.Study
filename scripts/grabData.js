@@ -1,4 +1,4 @@
-export function searchMeal(x, y, z, searchTerm) {
+export function searchMeal(x, y, z, a, searchTerm) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
     fetch(apiUrl + searchTerm)
     .then(res => {
@@ -10,13 +10,21 @@ export function searchMeal(x, y, z, searchTerm) {
     .then(data => {
         console.log(data);
         x.innerText = data.meals[0].strMeal;
-        y.innerText = data.meals[0].strInstructions;
         z.src = data.meals[0].strMealThumb;
+
+        //text wrap check
+        if (data.meals[0].strInstructions < 1600) {
+            y.innerText = data.meals[0].strInstructions;
+            a.innerText = "";
+        }
+        else {
+            console.log(data.meals[0].strInstructions.charAt(1600));
+        }
     })
     .catch(error => console.log('ERROR'));
 }
 
-export function randomMeal(x, y, z) {
+export function randomMeal(x, y, z, a) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
     fetch(apiUrl)
     .then(res => {
@@ -27,9 +35,18 @@ export function randomMeal(x, y, z) {
     })
     .then(data => {
         console.log(data);
+        console.log(data.meals[0].strInstructions.length);
         x.innerText = data.meals[0].strMeal;
-        y.innerText = data.meals[0].strInstructions;
         z.src = data.meals[0].strMealThumb;
+
+        //text wrap check
+        if (data.meals[0].strInstructions < 1600) {
+            y.innerText = data.meals[0].strInstructions;
+            a.innerText = "";
+        }
+        else {
+            console.log(data.meals[0].strInstructions.charAt(1600));
+        }
     })
     .catch(error => console.log('ERROR'));
 }
