@@ -29,7 +29,7 @@ export function searchMeal(x, y, z, a, searchTerm) {
         z.src = data.meals[0].strMealThumb;
 
         //text wrap check
-        if (data.meals[0].strInstructions < 1600) {
+        if (data.meals[0].strInstructions.length < 1600) {
             y.innerText = data.meals[0].strInstructions;
             a.innerText = "";
         }

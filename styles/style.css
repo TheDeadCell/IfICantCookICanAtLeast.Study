@@ -49,10 +49,11 @@ div {
     grid-area: miscSection;
     width: 35vw;
     border-bottom-width: 0;
+    padding: 10px;
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.25;
     position: relative;
 }
 
