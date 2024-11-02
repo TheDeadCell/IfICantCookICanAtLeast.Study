@@ -1,6 +1,9 @@
 import {randomMeal} from "./grabData.js";
 import {searchMeal} from "./grabData.js";
 
+//random recipe on open
+randomRecipe();
+
 document.getElementById("randomButton").addEventListener("click", randomRecipe); 
 document.getElementById("searchField").addEventListener("keydown", function (e) {
     if (e.code === "Enter") {

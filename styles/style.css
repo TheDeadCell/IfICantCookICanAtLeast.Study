@@ -15,6 +15,7 @@ body {
 }
 
 div {
+    position: relative;
     border-style: solid;
     border-color: grey;
     border-width: 3px;
@@ -24,19 +25,21 @@ div {
 .mainSection {
     grid-area: mainSection;
     border-right-width: 0;
-    width: auto;
-    height: 100vh;
+    width: 61vw;
+    height: 97vh;
 }
 
 .searchSection {
     grid-area: searchSection;
     border-bottom-width: 0;
-    width: auto;
-    height: 60vh;
+    width: 37vw;
 }
 
 .miscSection {
     grid-area: miscSection;
-    height: 40vh;
-    width: auto;
+    width: 37vw;
+}
+
+p {
+    line-height-step: 1.5;
 }
