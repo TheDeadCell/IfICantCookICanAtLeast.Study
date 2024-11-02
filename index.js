@@ -12,7 +12,7 @@ function searchMeal(searchTerm) {
     .catch(error => console.log('ERROR'))
 }
 
-function randomMeal(searchTerm) {
+function randomMeal() {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
     fetch(apiUrl)
     .then(res => {
