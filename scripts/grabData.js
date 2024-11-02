@@ -12,14 +12,14 @@ function searchMeal(searchTerm) {
     .catch(error => console.log('ERROR'))
 }
 
-function randomMeal() {
+export function randomMeal() {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
     fetch(apiUrl)
     .then(res => {
         if (!res.ok) {
             console.log(`HTTP error! Status: ${res.status}`)
         }
-        console.log(res.json())
+        return(res.json())
 
     })
     .then(data => console.log(data))
