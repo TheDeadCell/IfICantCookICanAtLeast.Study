@@ -1,0 +1,19 @@
+body {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-family: "Times New Roman", Times, serif;
+    display:grid;
+    grid-template-areas:
+    "mainSection mainSection mainSection searchSection searchSection"
+    "mainSection mainSection mainSection searchSection searchSection"
+    "mainSection mainSection mainSection searchSection searchSection"
+    "mainSection mainSection mainSection miscSection miscSection"
+    "mainSection mainSection mainSection miscSection miscSection";
+    margin:0;
+    grid-row-gap: 0.2%;
+}
+
+div {
+    margin: 10px;
+    border-style: solid;
+}

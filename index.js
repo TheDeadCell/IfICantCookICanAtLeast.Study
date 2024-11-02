@@ -1,31 +1,27 @@
 function searchMeal(searchTerm) {
-    const apiUrl = "www.themealdb.com/api/json/v1/1/search.php?s=";
+    const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
     fetch(apiUrl + searchTerm)
     .then(res => {
         if (!res.ok) {
-            console.log('HTTP error! Status: ${response.status}')
+            console.log(`HTTP error! Status: ${res.status}`)
         }
+        console.log(res.json())
+
     })
-    .then(res => {
-        return res.json()
-    })
-    .then(res => console.log(res.json()))
     .then(data => console.log(data))
     .catch(error => console.log('ERROR'))
 }
 
-function randomMeal() {
-    const apiUrl = "www.themealdb.com/api/json/v1/1/random.php";
+function randomMeal(searchTerm) {
+    const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
     fetch(apiUrl)
     .then(res => {
         if (!res.ok) {
-            console.log('HTTP error! Status: ${response.status}')
+            console.log(`HTTP error! Status: ${res.status}`)
         }
+        console.log(res.json())
+
     })
-    .then(res => {
-        return res.json()
-    })
-    .then(res => console.log(res.json()))
     .then(data => console.log(data))
     .catch(error => console.log('ERROR'))
 }
