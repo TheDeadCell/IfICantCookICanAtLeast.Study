@@ -1,3 +1,19 @@
+function displayIngredients(data) {
+    const meal = data.meals[0];
+    const ingredientList = document.getElementById("ingredientList");
+    ingredientList.innerText = '';
+    for (let i = 1; i <= 20; i++) {
+        const ingredient = meal[`strIngredient${i}`];
+        const measure = meal[`strMeasure${i}`];
+
+        if (ingredient && ingredient.trim() !== "") {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${measure} ${ingredient}`;
+            ingredientList.appendChild(listItem);
+        }
+    }
+}
+
 export function searchMeal(x, y, z, a, searchTerm) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
     fetch(apiUrl + searchTerm)
@@ -20,6 +36,7 @@ export function searchMeal(x, y, z, a, searchTerm) {
         else {
             console.log(data.meals[0].strInstructions.charAt(1600));
         }
+        displayIngredients(data);
     })
     .catch(error => console.log('ERROR'));
 }
@@ -47,6 +64,7 @@ export function randomMeal(x, y, z, a) {
         else {
             console.log(data.meals[0].strInstructions.charAt(1600));
         }
+        displayIngredients(data);
     })
     .catch(error => console.log('ERROR'));
 }
