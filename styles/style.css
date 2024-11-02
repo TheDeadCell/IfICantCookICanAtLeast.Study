@@ -10,12 +10,33 @@ body {
     "mainSection mainSection mainSection miscSection miscSection"
     "mainSection mainSection mainSection miscSection miscSection";
     margin:0;
-    grid-row-gap: 0.2%;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
 }
 
 div {
-    margin: 10px;
     border-style: solid;
     border-color: grey;
     border-width: 3px;
+    padding: 10px;
+}
+
+.mainSection {
+    grid-area: mainSection;
+    border-right-width: 0;
+    width: auto;
+    height: 100vh;
+}
+
+.searchSection {
+    grid-area: searchSection;
+    border-bottom-width: 0;
+    width: auto;
+    height: 60vh;
+}
+
+.miscSection {
+    grid-area: miscSection;
+    height: 40vh;
+    width: auto;
 }
