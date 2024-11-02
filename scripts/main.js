@@ -14,12 +14,14 @@ document.getElementById("searchField").addEventListener("keydown", function (e) 
 function randomRecipe() {
     let nameSection = document.getElementById("recipeName");
     let instructionsSection = document.getElementById("recipeInstructions");
-    randomMeal(nameSection, instructionsSection);
+    let recipeImage = document.getElementById("recipeImage");
+    randomMeal(nameSection, instructionsSection, recipeImage);
 }
 
 function searchRecipe(e) {
     let searchTerm = e.target.value
     let nameSection = document.getElementById("recipeName");
+    let recipeImage = document.getElementById("recipeImage");
     let instructionsSection = document.getElementById("recipeInstructions");
-    searchMeal(nameSection, instructionsSection, searchTerm);
+    searchMeal(nameSection, instructionsSection, recipeImage, searchTerm);
 }

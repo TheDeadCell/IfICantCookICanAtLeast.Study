@@ -1,4 +1,4 @@
-export function searchMeal(x, y, searchTerm) {
+export function searchMeal(x, y, z, searchTerm) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
     fetch(apiUrl + searchTerm)
     .then(res => {
@@ -11,11 +11,12 @@ export function searchMeal(x, y, searchTerm) {
         console.log(data);
         x.innerText = data.meals[0].strMeal;
         y.innerText = data.meals[0].strInstructions;
+        z.src = data.meals[0].strMealThumb;
     })
     .catch(error => console.log('ERROR'));
 }
 
-export function randomMeal(x, y) {
+export function randomMeal(x, y, z) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
     fetch(apiUrl)
     .then(res => {
@@ -28,6 +29,7 @@ export function randomMeal(x, y) {
         console.log(data);
         x.innerText = data.meals[0].strMeal;
         y.innerText = data.meals[0].strInstructions;
+        z.src = data.meals[0].strMealThumb;
     })
     .catch(error => console.log('ERROR'));
 }
