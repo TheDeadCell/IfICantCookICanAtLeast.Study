@@ -1,5 +1,4 @@
-import {randomMeal} from "./grabData.js";
-import {searchMeal} from "./grabData.js";
+import {randomMeal, searchMeal} from "./grabData.js";
 
 //random recipe on open
 randomRecipe();

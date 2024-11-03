@@ -44,15 +44,8 @@ export function searchMeal(x, y, z, a, searchTerm) {
         console.log(data);
         x.innerText = data.meals[0].strMeal;
         z.src = data.meals[0].strMealThumb;
-
-        //text wrap check
-        if (data.meals[0].strInstructions.length < 1600) {
-            y.innerText = data.meals[0].strInstructions;
-            a.innerText = "";
-        }
-        else {
-            console.log(data.meals[0].strInstructions.charAt(1600));
-        }
+        y.innerText = data.meals[0].strInstructions;
+    
         displayIngredients(data);
         displayRecipeOptions(data);
     })
@@ -73,15 +66,7 @@ export function randomMeal(x, y, z, a) {
         console.log(data.meals[0].strInstructions.length);
         x.innerText = data.meals[0].strMeal;
         z.src = data.meals[0].strMealThumb;
-
-        //text wrap check
-        if (data.meals[0].strInstructions < 1600) {
-            y.innerText = data.meals[0].strInstructions;
-            a.innerText = "";
-        }
-        else {
-            console.log(data.meals[0].strInstructions.charAt(1600));
-        }
+        y.innerText = data.meals[0].strInstructions;
         displayIngredients(data);
     })
     .catch(error => console.log('ERROR'));
