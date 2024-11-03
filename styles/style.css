@@ -29,11 +29,6 @@ div {
     border-bottom-width: 0;
     width: 62vw;
     height: 97vh;
-    display:grid;
-    grid-template-areas:
-    "h1 h1"
-    "img overflow"
-    "inst inst";
     margin:0;
     grid-row-gap: 0;
     grid-column-gap: 0;
@@ -57,20 +52,4 @@ div {
 p {
     line-height: 1.25;
     position: relative;
-}
-
-h1 {
-    grid-area: h1;
-}
-
-.recipeBox {
-    grid-area: inst;
-}
-
-#recipeImage {
-    grid-area: img;
-}
-
-#recipeInstructionsOverflow {
-    grid-area: overflow;
 }
