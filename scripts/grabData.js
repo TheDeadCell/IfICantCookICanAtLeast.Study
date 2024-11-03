@@ -16,18 +16,21 @@ function displayIngredients(data) {
 
 function displayRecipeOptions(data) {
     const recipesList = document.getElementById("recipesList");
+    const otherResultsHeader = document.getElementById("otherResultsHeader");
+
     recipesList.innerText = '';
     otherResultsHeader.innerText = '';
+
+    console.log(data.meals.length);
     if (data.meals.length > 1) {
-        const otherResultsHeader = document.getElementById("otherResultsHeader");
         otherResultsHeader.innerText = 'Other Matching Recipes'
-    }
-    for (let i = 1; i < data.meals.length; i++) {
-        let meal = data.meals[i];
-        let mealName = meal.strMeal;
-        const listItem = document.createElement("li");
-        listItem.textContent = `${mealName}`;
-        recipesList.appendChild(listItem);
+        for (let i = 1; i < data.meals.length; i++) {
+            let meal = data.meals[i];
+            let mealName = meal.strMeal;
+            const listItem = document.createElement("li");
+            listItem.textContent = `${mealName}`;
+            recipesList.appendChild(listItem);
+        }
     }
 }
 
@@ -47,6 +50,11 @@ export function searchMeal(x, y, z, a, searchTerm) {
     })
     .then(data => {
         console.log(data);
+        if (!data.meals || data.meals.length === 0) {
+        console.log("no results");
+        otherResultsHeader.innerText = 'No Results Found';
+        recipesList.innerText = 'Displaying Previous Recipe';
+        }
         x.innerText = data.meals[0].strMeal;
         z.src = data.meals[0].strMealThumb;
         y.innerText = data.meals[0].strInstructions;
@@ -69,6 +77,7 @@ export function randomMeal(x, y, z, a) {
     otherResultsHeader.innerText = '';
     const recipesList = document.getElementById("recipesList");
     recipesList.innerText = '';
+    otherResultsHeader.innerText = 'Displaying Random Recipe';
 
     mainBox.style.height = "97vh";
 
