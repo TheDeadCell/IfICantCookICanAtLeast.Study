@@ -20,14 +20,13 @@ div {
     border-color: grey;
     border-width: 3px;
     padding: 10px;
-    border-top-width: 0;
 }
 
 .mainSection {
     grid-area: mainSection;
     border-right-width: 0;
     border-bottom-width: 0;
-    width: 62vw;
+    width: 60.5vw;
     height: 97vh;
     margin:0;
     grid-row-gap: 0;
@@ -38,15 +37,16 @@ div {
 .searchSection {
     grid-area: searchSection;
     border-bottom-width: 3px;
-    width: 35vw;
+    width: 33vw;
     padding: 30px;
 }
 
 .miscSection {
     grid-area: miscSection;
-    width: 35vw;
-    border-bottom-width: 0;
+    width: 33vw;
+    border-bottom-width: 3px;
     padding: 30px;
+    border-top-width: 0;
 }
 
 p {

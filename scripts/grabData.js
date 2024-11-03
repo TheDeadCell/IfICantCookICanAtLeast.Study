@@ -33,8 +33,11 @@ function displayRecipeOptions(data) {
 
 export function searchMeal(x, y, z, a, searchTerm) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
-    let mainBox = document.getElementsByClassName("mainSection");
+
+    let mainBox = document.getElementById("mainSection1");
+
     mainBox.style.height = "97vh";
+
     fetch(apiUrl + searchTerm)
     .then(res => {
         if (!res.ok) {
@@ -59,7 +62,8 @@ export function searchMeal(x, y, z, a, searchTerm) {
 }
 
 export function randomMeal(x, y, z, a) {
-    let mainBox = document.getElementsByClassName("mainSection");
+    let mainBox = document.getElementById("mainSection1");
+
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
     const otherResultsHeader = document.getElementById("otherResultsHeader");
     otherResultsHeader.innerText = '';
@@ -81,6 +85,7 @@ export function randomMeal(x, y, z, a) {
         x.innerText = data.meals[0].strMeal;
         z.src = data.meals[0].strMealThumb;
         y.innerText = data.meals[0].strInstructions;
+
         //Make text box larger if need be:
         if (data.meals[0].strInstructions.length > 1600) {
             mainBox.style.height = "100%";
