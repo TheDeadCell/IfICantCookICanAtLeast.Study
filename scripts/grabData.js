@@ -14,21 +14,22 @@ function displayIngredients(data) {
     }
 }
 
-/*function displayIngredients(data) {
-    const meal = data.meals[0];
-    const ingredientList = document.getElementById("ingredientList");
-    ingredientList.innerText = '';
-    for (let i = 1; i <= 20; i++) {
-        const ingredient = meal[`strIngredient${i}`];
-        const measure = meal[`strMeasure${i}`];
-
-        if (ingredient && ingredient.trim() !== "") {
-            const listItem = document.createElement("li");
-            listItem.textContent = `${measure} ${ingredient}`;
-            ingredientList.appendChild(listItem);
-        }
+function displayRecipeOptions(data) {
+    const recipesList = document.getElementById("recipesList");
+    recipesList.innerText = '';
+    otherResultsHeader.innerText = '';
+    if (data.meals.length > 1) {
+        const otherResultsHeader = document.getElementById("otherResultsHeader");
+        otherResultsHeader.innerText = 'Other Matching Recipes'
     }
-}*/
+    for (let i = 1; i < data.meals.length; i++) {
+        let meal = data.meals[i];
+        let mealName = meal.strMeal;
+        const listItem = document.createElement("li");
+        listItem.textContent = `${mealName}`;
+        recipesList.appendChild(listItem);
+    }
+}
 
 export function searchMeal(x, y, z, a, searchTerm) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -53,6 +54,7 @@ export function searchMeal(x, y, z, a, searchTerm) {
             console.log(data.meals[0].strInstructions.charAt(1600));
         }
         displayIngredients(data);
+        displayRecipeOptions(data);
     })
     .catch(error => console.log('ERROR'));
 }
