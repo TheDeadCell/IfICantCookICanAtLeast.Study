@@ -34,7 +34,7 @@ function displayRecipeOptions(data) {
     }
 }
 
-export function searchMeal(x, y, z, a, searchTerm) {
+export function searchMeal(x, y, z, searchTerm) {
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
     let mainBox = document.getElementById("mainSection1");
@@ -69,7 +69,7 @@ export function searchMeal(x, y, z, a, searchTerm) {
     .catch(error => console.log('ERROR'));
 }
 
-export function randomMeal(x, y, z, a) {
+export function randomMeal(x, y, z) {
     let mainBox = document.getElementById("mainSection1");
 
     const apiUrl = "https://www.themealdb.com/api/json/v1/1/random.php";

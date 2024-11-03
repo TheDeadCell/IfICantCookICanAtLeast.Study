@@ -1,7 +1,5 @@
 body {
-    background-color: white;
-    color: rgb(0, 0, 0);
-    font-family: "Times New Roman", Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display:grid;
     grid-template-areas:
     "mainSection mainSection mainSection searchSection searchSection"
@@ -14,10 +12,15 @@ body {
     grid-column-gap: 0;
 }
 
+#mainBody {
+    background-color: #1b1b1b;
+    color: white;
+}
+
 div {
     position: relative;
     border-style: solid;
-    border-color: grey;
+    border-color: midnightblue;
     border-width: 3px;
     padding: 10px;
 }
@@ -39,6 +42,7 @@ div {
     border-bottom-width: 3px;
     width: 33vw;
     padding: 30px;
+    background-color: #131212;
 }
 
 .miscSection {
@@ -47,9 +51,37 @@ div {
     border-bottom-width: 3px;
     padding: 30px;
     border-top-width: 0;
+    background-color: #131212;
 }
 
 p {
-    line-height: 1.25;
+    line-height: 1.35;
     position: relative;
+    color: lightgray;
 }
+
+input {
+    background-color: grey;
+    border-color: gray;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+img {
+    border-style: solid;
+    border-width: 3px;
+    border-color: midnightblue;
+}
+
+#otherResultsHeader {
+    color: lightgrey;
+}
+
+/*
+#nightModeToggle {
+    font-size:3em;
+    border-width: 0;
+    position: absolute;
+    right: 0;
+}
+*/
