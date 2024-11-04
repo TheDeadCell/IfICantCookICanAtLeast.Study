@@ -1,10 +1,12 @@
 # IfICan'tCookICanAtLeast.Study
+### The simple recipe website for college students in a rush
 
 ## How To Run
 Visit [https://thedeadcell.github.io/IfICantCookICanAtLeast.Study/](https://thedeadcell.github.io/IfICantCookICanAtLeast.Study/)
 
 ## Inspiration
-We built a fun website that would provide a solid challenge for our team. The start of our process was sifting through a list of interesting API's and until we found one that caught our attention and fit the theme of food and agriculture. The website formatting was somewhat based on the golden ratio proportions, and the color scheme was loosely inspired by the dark mode aesthetics on sites like Discord and Reddit.  
+We built a fun website that would provide a solid challenge for our team. The start of our process was sifting through a list of interesting API's and until we found one that caught our attention and fit the theme of food and agriculture. We all experienced the annoyances of scrolling down through pages of backstory and ads on recipe websites just to find the ingredients list, so we decided to build a website that put the important things front and center.
+The website formatting was somewhat based on the golden ratio proportions, and the color scheme was loosely inspired by the dark mode aesthetics on sites like Discord and Reddit.  
 ## How we built it
 Visual Studio Code, Github, ChatGPT (for debugging/educational purposes), HTML, JavaScript, CSS
 ## Challenges we ran into
