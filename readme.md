@@ -1,6 +1,8 @@
 # IfICan'tCookICanAtLeast.Study
 ### The simple recipe website for college students in a rush
 
+## This Project was created for the 2024 Tigerhacks Hackathon
+
 ## How To Run
 Visit [https://thedeadcell.github.io/IfICantCookICanAtLeast.Study/](https://thedeadcell.github.io/IfICantCookICanAtLeast.Study/)
 
